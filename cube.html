@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.stage {
+				position: relative;
+				width: 800px;
+				height: 800px;
+				margin: 100px auto;
+				perspective: 1600px;
+			}
+			
+			.stage .three-d-box {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -100px 0 0 -100px;
+				
+			}
+			
+			.stage .three-d-box>div {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				left: 0;
+				top: 0;
+				font-size: 50px;
+				line-height: 200px;
+				text-align: center;
+				opacity: 0.5;
+			}
+			
+			.stage .three-d-box>div:nth-child(1) {
+				background-color: yellow;
+				transform: translateZ(-100px);
+			}
+			
+			.stage .three-d-box>div:nth-child(2) {
+				background-color: greenyellow;
+				transform: translateZ(100px);
+			}
+			
+			.stage .three-d-box>div:nth-child(3) {
+				background-color: lavender;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			
+			.stage .three-d-box>div:nth-child(4) {
+				background-color: orange;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			
+			.stage .three-d-box>div:nth-child(5) {
+				background-color: red;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			
+			.stage .three-d-box>div:nth-child(6) {
+				background-color: blue;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="stage">
+			<div class="three-d-box">
+				<div>:capricorn:</div>
+				<div>:virgo:</div>
+				<div>:leo:</div>
+				<div>:cancer:</div>
+				<div>:libra:</div>
+				<div>:pisces:</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
