@@ -25,7 +25,8 @@
 				left: 50%;
 				top: 50%;
 				margin: -100px 0 0 -100px;
-				
+				-webkit-transform-style: preserve-3d;
+				-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 			}
 			
 			.stage .three-d-box>div {
@@ -84,7 +85,26 @@
 				<div>:pisces:</div>
 			</div>
 		</div>
-
+		X<input type="range" name="rotateX" id="rotateX" value="0" min="0" max="360" />
+		Y<input type="range" name="rotateY" id="rotateY" value="0" min="0" max="360" />
+		Z<input type="range" name="rotateZ" id="rotateZ" value="0" min="0" max="360" />
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			
+			$("input").on("input",function(){
+				var x = $("#rotateX").val();
+				var y = $("#rotateY").val();
+				var z = $("#rotateZ").val();
+				$(".three-d-box").css("-webkit-transform","rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)")
+			});
+			
+			
+		</script>
+		
+		
+		
+		
 	</body>
 
 </html>
